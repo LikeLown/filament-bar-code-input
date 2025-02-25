@@ -17,13 +17,6 @@ You can install the package via composer:
 composer require likelown/filament-bar-code-input
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="filament-bar-code-input-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -46,8 +39,8 @@ return [
 ## Usage
 
 ```php
-$barCodeInput = new LikeLown\BarCodeInput();
-echo $barCodeInput->echoPhrase('Hello, LikeLown!');
+LikeLown\BarCodeInput();
+
 ```
 
 ## Testing

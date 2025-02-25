@@ -13,5 +13,4 @@ class BarCodeInput extends Facade
     {
         return \LikeLown\BarCodeInput\Components\BarCodeInput::class;
     }
-
 }

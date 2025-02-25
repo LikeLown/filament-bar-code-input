@@ -9,7 +9,9 @@ class BarCodeInput extends TextInput
     protected string $view = 'filament-bar-code-input::components.bar-code-input';
 
     protected $qrBoxHeight = 150;
+
     protected $qrBoxWidth = 200;
+
     protected $fps = 10;
 
     protected static function getFacadeAccessor()
@@ -54,5 +56,4 @@ class BarCodeInput extends TextInput
     {
         return $this->evaluate($this->fps);
     }
-
 }

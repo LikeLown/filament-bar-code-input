@@ -25,7 +25,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'LikeLown\\BarCodeInput\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn(string $modelName) => 'LikeLown\\BarCodeInput\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
@@ -36,14 +36,11 @@ class TestCase extends Orchestra
             BladeCaptureDirectiveServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
             BladeIconsServiceProvider::class,
-            FilamentServiceProvider::class,
             FormsServiceProvider::class,
             InfolistsServiceProvider::class,
             LivewireServiceProvider::class,
             NotificationsServiceProvider::class,
             SupportServiceProvider::class,
-            TablesServiceProvider::class,
-            WidgetsServiceProvider::class,
             BarCodeInputServiceProvider::class,
         ];
     }

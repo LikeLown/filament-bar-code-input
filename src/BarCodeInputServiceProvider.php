@@ -9,12 +9,12 @@ use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
+use LikeLown\BarCodeInput\Commands\BarCodeInputCommand;
+use LikeLown\BarCodeInput\Testing\TestsBarCodeInput;
 use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use LikeLown\BarCodeInput\Commands\BarCodeInputCommand;
-use LikeLown\BarCodeInput\Testing\TestsBarCodeInput;
 
 class BarCodeInputServiceProvider extends PackageServiceProvider
 {

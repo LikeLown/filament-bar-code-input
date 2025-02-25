@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace LikeLown\BarCodeInput\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class BarCodeInputCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-bar-code-input';
 
     public $description = 'My command';
 

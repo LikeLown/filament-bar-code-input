@@ -10,7 +10,7 @@
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
     <div x-data="{
-    cameraErrorMessage: '{{ trans('filament-bar-code-input::bar-code-input.unable_to_access_camera') }}',
+            cameraErrorMessage: '{{ trans('filament-bar-code-input::bar-code-input.unable_to_access_camera') }}',
             state: $wire.{{ $applyStateBindingModifiers("\$entangle('{$getStatePath()}')") }},
             fps : @js($fps),
             qrBoxWidth : @js($qrBoxWidth),
@@ -47,9 +47,11 @@
             
             stopScanner() {
                 if (this.html5QrCode) {
-                    this.html5QrCode.stop().catch((err) => {
+                    if(this.html5QrCode.isScanning) {
+                        this.html5QrCode.stop().catch((err) => {
                         console.error('Error stopping scanner:', err);
-                    });
+                        });
+                    }
                     this.html5QrCode = null;
                 }
                 this.scanning = false;
@@ -61,8 +63,8 @@
             },
             
             closeModal() {
-                this.stopScanner();
                 $dispatch('close-modal', { id: this.modalId });
+                this.stopScanner();
             }
         }" @barcode-scanned.window="state = $event.detail" @keydown.escape.window="if (scanning) closeModal()">
         <x-filament::input.wrapper :disabled="$isDisabled" class="relative">

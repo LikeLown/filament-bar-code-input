@@ -17,7 +17,6 @@ class BarCodeInput extends TextInput
         return \LikeLown\BarCodeInput\Components\BarCodeInput::class;
     }
 
-
     public function qrBoxHeight(int|\Closure|null $qrBoxHeight): static
     {
 

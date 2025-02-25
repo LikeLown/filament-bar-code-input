@@ -19,7 +19,7 @@ class BarCodeInput extends TextInput
         return \LikeLown\BarCodeInput\Components\BarCodeInput::class;
     }
 
-    public function qrBoxHeight(int|\Closure|null $qrBoxHeight): static
+    public function qrBoxHeight(int | \Closure | null $qrBoxHeight): static
     {
 
         $this->qrBoxHeight = $qrBoxHeight;
@@ -32,7 +32,7 @@ class BarCodeInput extends TextInput
         return $this->evaluate($this->qrBoxHeight);
     }
 
-    public function qrBoxWidth(int|\Closure|null $qrBoxWidth): static
+    public function qrBoxWidth(int | \Closure | null $qrBoxWidth): static
     {
 
         $this->qrBoxWidth = $qrBoxWidth;
@@ -45,7 +45,7 @@ class BarCodeInput extends TextInput
         return $this->evaluate($this->qrBoxWidth);
     }
 
-    public function fps(int|\Closure|null $fps): static
+    public function fps(int | \Closure | null $fps): static
     {
         $this->fps = $fps;
 

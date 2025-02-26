@@ -58,7 +58,9 @@ class BarCodeInputServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void {}
+    public function packageRegistered(): void
+    {
+    }
 
     public function packageBooted(): void
     {
@@ -146,7 +148,6 @@ class BarCodeInputServiceProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            'create_filament-bar-code-input_table',
         ];
     }
 }
